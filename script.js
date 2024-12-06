@@ -5,6 +5,9 @@
 let date = new Date();
 
 
+setInterval(getCurrent, 1000)
+
+
 let year = date.getFullYear();
 let month = date.getMonth() + 1;
 let day = date.getDate();
@@ -20,12 +23,16 @@ console.log(hours);
 console.log(minutes);
 console.log(seconds);
 
-document.getElementById("yearText").innerHTML = year;
-document.getElementById("monthText").innerHTML = month;
-document.getElementById("dayText").innerHTML = day;
-document.getElementById("hourText").innerHTML = hours;
-document.getElementById("minuteText").innerHTML = minutes;
-document.getElementById("secondText").innerHTML = seconds;
+function getCurrent() {
+    document.getElementById("yearText").innerHTML = year;
+    document.getElementById("monthText").innerHTML = month;
+    document.getElementById("dayText").innerHTML = day;
+    document.getElementById("hourText").innerHTML = hours;
+    document.getElementById("minuteText").innerHTML = minutes;
+    document.getElementById("secondText").innerHTML = seconds;
+}
+
+
 
 
 const yearText = document.querySelector("#yearText");
